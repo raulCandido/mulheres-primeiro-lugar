@@ -31,6 +31,12 @@ npm run start
 npm run ts-check && npm run lint
 ```
 
+## Plano de implementação ativo
+
+Feature em andamento: **Estrutura Inicial do Projeto** (`002-setup-projeto-inicial`)
+Plano completo: [specs/002-setup-projeto-inicial/plan.md](specs/002-setup-projeto-inicial/plan.md)
+Quickstart: [specs/002-setup-projeto-inicial/quickstart.md](specs/002-setup-projeto-inicial/quickstart.md)
+
 ## Variáveis de ambiente
 
 Crie um `.env.local` na raiz com:
