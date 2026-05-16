@@ -88,10 +88,10 @@ O desenvolvedor escreve código e confia que erros de tipo e estilo são detecta
 - **FR-001**: O projeto DEVE ter uma página inicial funcional com as 6 seções da landing page na ordem canônica: Hero, About, Features/Benefits, Testimonials, CTA, Footer
 - **FR-002**: Cada seção DEVE ser um componente isolado em seu próprio domínio dentro de `components/`, com barrel export via `index.ts`
 - **FR-003**: O sistema DEVE ter providers globais disponíveis em todas as páginas sem necessidade de configuração por página
-- **FR-004**: O layout raiz DEVE exportar metadados SEO completos: título, descrição, og:title, og:description, og:image e URL canônica
+- **FR-004**: O layout raiz DEVE exportar metadados SEO completos: título, descrição, og:title, og:description e URL canônica; og:image DEVE usar imagem placeholder temporária (1200×630, cor sólida com nome do projeto) até a identidade visual estar definida
 - **FR-005**: Todo o conteúdo textual estático da landing page DEVE estar centralizado em um único arquivo tipado em `lib/`; componentes NÃO DEVEM ter strings de conteúdo inline
-- **FR-006**: O projeto DEVE ter fontes carregadas via serviço de fontes web otimizado para performance
-- **FR-007**: O dark mode DEVE estar configurado e funcional via classe CSS, sem necessidade de lógica JavaScript adicional
+- **FR-006**: O projeto DEVE carregar duas fontes via serviço de fontes web: Playfair Display para títulos e headings, e Inter para corpo de texto e elementos de interface
+- **FR-007**: O dark mode DEVE ser ativado automaticamente com base na preferência de cor do sistema operacional do visitante, sem necessidade de toggle manual ou lógica JavaScript adicional
 - **FR-008**: A estrutura de pastas DEVE estar criada e pronta para receber novos domínios em `components/`, `features/` e `lib/`
 - **FR-009**: O projeto DEVE passar sem erros na verificação de tipos TypeScript
 - **FR-010**: O projeto DEVE passar sem erros ou avisos no linter
@@ -116,10 +116,21 @@ O desenvolvedor escreve código e confia que erros de tipo e estilo são detecta
 
 ## Assumptions
 
-- A "estrutura inicial" entrega componentes shell — a aparência visual final de cada seção será refinada em features subsequentes
-- O conteúdo placeholder (textos de exemplo) em `content.ts` será substituído pelo conteúdo real antes do lançamento
+- A "estrutura inicial" entrega componentes shell com heading e área de conteúdo delimitada por seção — a aparência visual final será refinada em features subsequentes
+- O conteúdo placeholder em `content.ts` inclui título e texto de apoio por seção (sem lorem ipsum genérico); será substituído pelo conteúdo real antes do lançamento
 - A variável de ambiente `RESEND_API_KEY` não é necessária para esta feature — ela será exigida apenas pela feature do formulário CTA
 - O deploy automático na Vercel já está configurado via integração com o repositório Git
 - Acessibilidade (WCAG 2.1 AA) é um requisito desde a estrutura inicial, não um refinamento posterior
 - O projeto não terá banco de dados, autenticação ou CMS nesta fase nem nas subsequentes (conforme constituição)
 - O projeto usa uma única rota (`/`) — não haverá sub-páginas nesta fase
+- Responsividade mobile-first: o layout de cada seção shell é projetado para telas pequenas e expandido para desktop via breakpoints
+
+## Clarificações
+
+### Sessão 2026-05-16
+
+- Q: Como o dark mode deve ser ativado? → A: Automaticamente via preferência de cor do sistema operacional (prefers-color-scheme), sem toggle manual
+- Q: Qual estratégia de responsividade para os shells? → A: Mobile-first — layout base para telas pequenas, expandido para desktop via breakpoints
+- Q: Nível mínimo de conteúdo de cada seção shell? → A: Heading + área de conteúdo delimitada com placeholder representativo (não lorem ipsum)
+- Q: O que usar como og:image na estrutura inicial? → A: Imagem placeholder temporária 1200×630 com cor sólida e nome do projeto
+- Q: Qual tipografia adotar na estrutura inicial? → A: Playfair Display (títulos/headings) + Inter (corpo de texto e interface)
