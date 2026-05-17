@@ -41,14 +41,23 @@ export function EvaluationForm() {
           role="status"
           aria-live="polite"
         >
-          <motion.span
+          <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="text-6xl block mb-6"
+            className="mx-auto mb-6 w-16 h-16 rounded-full bg-gold/20 border-2 border-gold/60 flex items-center justify-center"
+            aria-hidden="true"
           >
-            🌸
-          </motion.span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              strokeWidth={2.5}
+              stroke="currentColor"
+              className="w-8 h-8 text-gold"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </motion.div>
           <h3 className="font-serif text-3xl font-bold text-nude mb-3">
             {content.evaluation.successMessage}
           </h3>
@@ -63,7 +72,7 @@ export function EvaluationForm() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, y: -10 }}
           onSubmit={handleSubmit}
-          className="glass-card-strong rounded-3xl p-8 md:p-10 space-y-8"
+          className="glass-card-strong rounded-3xl p-7 sm:p-8 md:p-10 space-y-8"
           aria-label="Formulário de avaliação do evento"
           noValidate
         >
@@ -82,12 +91,12 @@ export function EvaluationForm() {
 
           {/* Rating selector */}
           <fieldset>
-            <legend className="font-serif text-xl md:text-2xl font-semibold text-nude text-center mb-6">
+            <legend className="font-serif text-2xl md:text-3xl font-semibold text-nude text-center mb-6">
               {content.evaluation.question}
             </legend>
 
             <div
-              className="flex flex-wrap justify-center gap-3"
+              className="flex flex-wrap justify-center gap-3 sm:gap-4"
               role="group"
               aria-label="Selecione uma nota de 0 a 5 (obrigatório)"
             >
@@ -109,14 +118,16 @@ export function EvaluationForm() {
                     }
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     className={`
-                      flex flex-col items-center gap-1 w-20 py-3 rounded-2xl border-2 transition-colors
+                      flex flex-col items-center gap-1 w-20 py-4 rounded-2xl border-2 transition-colors
                       focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black-soft
                       ${isSelected
                         ? "bg-gold/20 shadow-lg shadow-gold/20"
                         : "bg-white/5 hover:bg-white/10"}
                     `}
                   >
-                    <span className="text-2xl" aria-hidden="true">{opt.emoji}</span>
+                    <span className={`text-2xl font-bold leading-none ${isSelected ? "text-gold" : "text-nude/70"}`}>
+                      {opt.value}
+                    </span>
                     <span className={`text-xs font-medium ${isSelected ? "text-gold" : "text-nude/60"}`}>
                       {opt.label}
                     </span>
@@ -171,7 +182,7 @@ export function EvaluationForm() {
             whileHover={selectedRating !== null && !isPending ? { scale: 1.02 } : {}}
             whileTap={selectedRating !== null && !isPending ? { scale: 0.98 } : {}}
             className="
-              w-full py-4 rounded-full font-semibold text-black-soft
+              w-full py-5 rounded-full font-semibold text-black-soft
               bg-gradient-to-r from-gold to-rose-burnt
               disabled:opacity-40 disabled:cursor-not-allowed
               transition-opacity shadow-lg shadow-rose-burnt/20
