@@ -4,7 +4,7 @@
 
 | Pacote | Versão |
 |---|---|
-| Next.js (App Router) | 16.x |
+| Next.js (App Router) | 14.x |
 | React | 19.x |
 | TypeScript | 6.x (strict mode) |
 | Tailwind CSS | 4.x |
@@ -15,6 +15,7 @@
 - Hospedagem: Vercel (plano gratuito)
 - Gerenciador de pacotes: npm
 - Sem banco de dados.
+- Envio de e-mail via **Resend** (Server Action no CTA).
 
 > **Tailwind CSS v4**: configuração CSS-first — não há `tailwind.config.ts`. Customizações via `@import "tailwindcss"` e variáveis CSS nativas em `globals.css`.
 
@@ -43,6 +44,8 @@ Hero → About → Features/Benefits → Testimonials → CTA → Footer
 
 Cada seção é um componente `*-content.tsx` isolado em `src/components/`. Seções recebem apenas as props que exibem — sem estado compartilhado entre elas.
 
+O CTA é um formulário de captura de contato com campos de nome, contato (e-mail ou telefone) e nota/opinião relacionada a um evento. Processado via Server Action em `src/features/`.
+
 ## IV. Dados estáticos
 
 Textos, depoimentos e conteúdos ficam em `src/lib/content.ts` como objetos e arrays tipados. Componentes importam desse arquivo — nunca hardcodam strings inline.
@@ -67,16 +70,34 @@ Textos, depoimentos e conteúdos ficam em `src/lib/content.ts` como objetos e ar
 - Fontes via `next/font` (Google Fonts) em `src/app/layout.tsx`.
 - Dark mode configurado via classe CSS em `globals.css`.
 
-## VIII. SEO
+## VIII. Acessibilidade
+
+Padrão mínimo: **WCAG 2.1 nível AA**. Aplicar em todos os componentes: contraste de cores, navegação por teclado, atributos `aria-*`, textos alternativos em imagens.
+
+## IX. SEO
 
 Usar exclusivamente a API nativa `Metadata` do Next.js — sem bibliotecas SEO de terceiros. Exportar `metadata` de `src/app/layout.tsx` (global) ou de `src/app/page.tsx` (por página).
 
-## IX. Deploy
+## X. Deploy
 
 Deploy automático na Vercel a cada push na branch `main`. Variáveis de ambiente configuradas no painel da Vercel: `process.env.NEXT_PUBLIC_*` para client-side, `process.env.*` para server-side.
+
+## XI. Fora do escopo
+
+Qualquer funcionalidade dinâmica além do formulário CTA está explicitamente fora do escopo: autenticação, área de membros, CMS, blog, painel administrativo, notificações em tempo real, pagamentos e integrações com plataformas externas de terceiros. Novas features dinâmicas exigem alteração desta constituição.
 
 ## Governança
 
 Esta constituição tem precedência sobre qualquer outra convenção. Alterações exigem justificativa explícita e atualização deste documento.
 
 **Versão**: 1.0.0 | **Ratificada**: 2026-05-16 | **Última alteração**: 2026-05-16
+
+## Clarificações
+
+### Sessão 2026-05-16
+
+- Q: Qual versão do Next.js usar? → A: 14.x
+- Q: O que o CTA deve fazer? → A: Formulário de captura de contato com nota/opinião relacionada a um evento
+- Q: Destino dos dados do formulário? → A: E-mail via Resend (Server Action)
+- Q: Padrão de acessibilidade? → A: WCAG 2.1 nível AA
+- Q: O que está fora do escopo? → A: Qualquer funcionalidade dinâmica além do formulário CTA
