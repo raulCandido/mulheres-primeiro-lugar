@@ -1,4 +1,4 @@
-# Specification Quality Checklist: Formulário de Avaliação de Evento
+# Specification Quality Checklist: Landing Page — Mulheres Primeiro Lugar
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2026-05-16
@@ -31,5 +31,8 @@
 
 ## Notes
 
-- Spec aprovada sem marcadores [NEEDS CLARIFICATION] — todas as decisões foram inferidas com segurança a partir da descrição fornecida
-- Pronta para `/speckit-clarify` ou `/speckit-plan`
+- Spec reescrito em 2026-05-16 para cobrir toda a landing page (hero, sobre o evento, experiências, formulário, rodapé) — versão anterior cobria apenas o formulário isolado
+- Escala de notas corrigida para 0–5 (6 opções) conforme descrição do usuário; versão anterior usava 1–5 equivocadamente
+- Imagens do background da hero section: assumption de uso de imagens de stock como placeholder até materiais reais serem fornecidos
+- Redes sociais do evento: assumption de configuração como constantes no código
+- Todos os itens do checklist aprovados — pronto para `/speckit-plan`

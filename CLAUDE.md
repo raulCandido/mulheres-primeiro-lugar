@@ -34,7 +34,11 @@ npm run ts-check && npm run lint
 ## Plano de implementação ativo
 
 Feature concluída: **Estrutura Inicial do Projeto** (`002-setup-projeto-inicial`) ✅
-Próxima feature: **Formulário de Avaliação do Evento** (`001-formulario-avaliacao-evento`)
+Feature em andamento: **Landing Page — Mulheres Primeiro Lugar** (`001-formulario-avaliacao-evento`)
+
+- Plano: [specs/001-formulario-avaliacao-evento/plan.md](specs/001-formulario-avaliacao-evento/plan.md)
+- Spec: [specs/001-formulario-avaliacao-evento/spec.md](specs/001-formulario-avaliacao-evento/spec.md)
+- Tarefas: [specs/001-formulario-avaliacao-evento/tasks.md](specs/001-formulario-avaliacao-evento/tasks.md) _(gerado por `/speckit-tasks`)_
 
 ## Variáveis de ambiente
 
