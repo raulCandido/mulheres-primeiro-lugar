@@ -32,10 +32,9 @@ export async function submitEvaluation(formData: FormData): Promise<ActionResult
     return { success: false, error: "O comentário deve ter no máximo 1000 caracteres." };
   }
 
-  // Derive label and emoji from rating options
+  // Derive label from rating options
   const option = content.evaluation.ratingOptions.find((o) => o.value === rating);
   const label = option?.label ?? String(rating);
-  const emoji = option?.emoji ?? "⭐";
 
   // Timestamp in Brasília timezone
   const submittedAt = new Date().toLocaleString("pt-BR", {
@@ -52,7 +51,7 @@ export async function submitEvaluation(formData: FormData): Promise<ActionResult
     return { success: false, error: "Não foi possível enviar. Tente novamente em instantes." };
   }
 
-  const subject = `${emoji} Avaliação recebida: ${label} (${rating}/5) — Mulheres Primeiro Lugar`;
+  const subject = `Avaliação recebida: ${label} (${rating}/5) — Mulheres Primeiro Lugar`;
 
   const html = `
     <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #120A0E; color: #E8D5C4; padding: 40px; border-radius: 16px; border: 1px solid rgba(201,168,76,0.3);">
@@ -60,8 +59,8 @@ export async function submitEvaluation(formData: FormData): Promise<ActionResult
       <p style="color: #E8D5C4; opacity: 0.6; margin-bottom: 32px; font-size: 14px;">Nova avaliação recebida</p>
 
       <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.2); border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: center;">
-        <p style="font-size: 48px; margin: 0 0 8px;">${emoji}</p>
-        <p style="font-size: 28px; font-weight: bold; color: #C9A84C; margin: 0;">${label}</p>
+        <p style="font-size: 48px; font-weight: bold; color: #C9A84C; margin: 0 0 8px;">${rating}</p>
+        <p style="font-size: 20px; font-weight: bold; color: #C9A84C; margin: 0;">${label}</p>
         <p style="color: #E8D5C4; opacity: 0.5; margin: 4px 0 0; font-size: 14px;">Nota ${rating} de 5</p>
       </div>
 

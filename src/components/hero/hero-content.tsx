@@ -16,7 +16,7 @@ export function HeroContent() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-rose-burnt/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-gold/5 blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+      <div className="relative z-10 text-center px-5 sm:px-8 max-w-3xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export function HeroContent() {
           transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
-          className="inline-block px-10 py-4 rounded-full font-semibold text-black-soft bg-gradient-to-r from-gold to-rose-burnt shadow-lg shadow-rose-burnt/30 hover:shadow-rose-burnt/50 transition-shadow"
+          className="inline-block px-12 py-5 rounded-full font-semibold text-black-soft bg-gradient-to-r from-gold to-rose-burnt shadow-lg shadow-rose-burnt/30 hover:shadow-rose-burnt/50 transition-shadow"
         >
           {content.hero.ctaLabel}
         </motion.a>

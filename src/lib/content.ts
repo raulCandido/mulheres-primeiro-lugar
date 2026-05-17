@@ -1,19 +1,16 @@
 export interface RatingOption {
   value: 0 | 1 | 2 | 3 | 4 | 5;
   label: string;
-  emoji: string;
 }
 
 export interface ExperienceCard {
   title: string;
   speaker?: string;
-  emoji: string;
 }
 
 export interface SocialLink {
   label: string;
   href: string;
-  icon: string;
 }
 
 interface HeroContent {
@@ -80,21 +77,21 @@ export const content: SiteContent = {
     title: "Experiências do Evento",
     subtitle: "Tudo que vivemos juntas nessa noite inesquecível",
     items: [
-      { title: "Palestra de Sexologia", speaker: "Brenda Genes", emoji: "🎤" },
-      { title: "Massagem Tântrica Terapêutica", speaker: "Nayade Benicio", emoji: "🌸" },
-      { title: "Defesa Pessoal Feminina", speaker: "Analia Oliveira", emoji: "🥊" },
-      { title: "Pole Dance Experience", speaker: "Pilar Fernandez", emoji: "💃" },
-      { title: "Feira Empreendedora Feminina", emoji: "🛍️" },
-      { title: "Serviços de Beleza", emoji: "💄" },
-      { title: "Bartender & Drinks", emoji: "🍹" },
-      { title: "Epilação e Estética", emoji: "✨" },
-      { title: "Espaço de Tatuagem", emoji: "🖋️" },
-      { title: "Refeições no Local", emoji: "🍽️" },
-      { title: "Spa Facial", emoji: "🧖‍♀️" },
-      { title: "Massagem Relaxante", emoji: "💆‍♀️" },
-      { title: "Reflexologia", emoji: "🦶" },
-      { title: "Nutricionista", emoji: "🥗" },
-      { title: "Espaço Fotográfico Instagramável", emoji: "📸" },
+      { title: "Palestra de Sexologia", speaker: "Brenda Genes" },
+      { title: "Massagem Tântrica Terapêutica", speaker: "Nayade Benicio" },
+      { title: "Defesa Pessoal Feminina", speaker: "Analia Oliveira" },
+      { title: "Pole Dance Experience", speaker: "Pilar Fernandez" },
+      { title: "Feira Empreendedora Feminina" },
+      { title: "Serviços de Beleza" },
+      { title: "Bartender & Drinks" },
+      { title: "Epilação e Estética" },
+      { title: "Espaço de Tatuagem" },
+      { title: "Refeições no Local" },
+      { title: "Spa Facial" },
+      { title: "Massagem Relaxante" },
+      { title: "Reflexologia" },
+      { title: "Nutricionista" },
+      { title: "Espaço Fotográfico Instagramável" },
     ],
   },
 
@@ -103,19 +100,19 @@ export const content: SiteContent = {
     question: "O que você achou do nosso evento?",
     commentLabel: "Deseja deixar alguma sugestão ou comentário?",
     commentPlaceholder:
-      "Opcional — conte o que mais te marcou, o que podemos melhorar ou qualquer mensagem que queira deixar para nós 💛",
+      "Opcional — conte o que mais te marcou, o que podemos melhorar ou qualquer mensagem que queira deixar para nós.",
     submitLabel: "Enviar Avaliação",
-    successMessage: "Obrigada de coração! 🌸",
+    successMessage: "Obrigada de coração!",
     successSubtitle:
       "Sua avaliação foi recebida. Ela nos inspira a criar encontros ainda mais especiais.",
     errorMessage: "Não foi possível enviar. Verifique sua conexão e tente novamente.",
     ratingOptions: [
-      { value: 0, label: "Muito Ruim", emoji: "😞" },
-      { value: 1, label: "Ruim", emoji: "😕" },
-      { value: 2, label: "Regular", emoji: "😐" },
-      { value: 3, label: "Bom", emoji: "🙂" },
-      { value: 4, label: "Muito Bom", emoji: "😊" },
-      { value: 5, label: "Excelente", emoji: "🤩" },
+      { value: 0, label: "Muito Ruim" },
+      { value: 1, label: "Ruim" },
+      { value: 2, label: "Regular" },
+      { value: 3, label: "Bom" },
+      { value: 4, label: "Muito Bom" },
+      { value: 5, label: "Excelente" },
     ],
   },
 
@@ -123,11 +120,11 @@ export const content: SiteContent = {
     brandName: "Mulheres Primeiro Lugar",
     tagline: "Criado por mulheres. Para mulheres.",
     closingMessage:
-      "Gratidão por fazer parte desse encontro. Você é a razão de tudo isso existir. Até a próxima! 💕",
+      "Gratidão por fazer parte desse encontro. Você é a razão de tudo isso existir. Até a próxima!",
     contactEmail: "contato@mulheresprimeiralugar.com.br",
     socialLinks: [
-      { label: "Instagram", href: "https://instagram.com/mulheresprimeiralugar", icon: "📸" },
-      { label: "WhatsApp", href: "https://wa.me/5500000000000", icon: "💬" },
+      { label: "Instagram", href: "https://instagram.com/mulheresprimeiralugar" },
+      { label: "WhatsApp", href: "https://wa.me/5500000000000" },
     ],
     copyright: `© ${new Date().getFullYear()} Mulheres Primeiro Lugar. Todos os direitos reservados.`,
   },

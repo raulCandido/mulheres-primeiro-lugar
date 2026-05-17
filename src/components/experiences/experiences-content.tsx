@@ -6,8 +6,8 @@ export function ExperiencesContent() {
     <section aria-label="Experiências do Evento" className="py-24 bg-black-soft relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-gold/30 to-transparent" />
 
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+      <div className="max-w-6xl mx-auto px-5 sm:px-6">
+        <div className="text-center mb-12">
           <p className="text-gold text-sm font-medium tracking-widest uppercase mb-4">
             O que vivemos juntas
           </p>

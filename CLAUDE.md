@@ -34,11 +34,12 @@ npm run ts-check && npm run lint
 ## Plano de implementação ativo
 
 Feature concluída: **Estrutura Inicial do Projeto** (`002-setup-projeto-inicial`) ✅
-Feature em andamento: **Landing Page — Mulheres Primeiro Lugar** (`001-formulario-avaliacao-evento`)
+Feature concluída: **Landing Page — Mulheres Primeiro Lugar** (`001-formulario-avaliacao-evento`) ✅
+Feature em andamento: **Refinamento Visual e UX Mobile-First** (`003-mobile-layout-polish`)
 
-- Plano: [specs/001-formulario-avaliacao-evento/plan.md](specs/001-formulario-avaliacao-evento/plan.md)
-- Spec: [specs/001-formulario-avaliacao-evento/spec.md](specs/001-formulario-avaliacao-evento/spec.md)
-- Tarefas: [specs/001-formulario-avaliacao-evento/tasks.md](specs/001-formulario-avaliacao-evento/tasks.md) _(gerado por `/speckit-tasks`)_
+- Plano: [specs/003-mobile-layout-polish/plan.md](specs/003-mobile-layout-polish/plan.md)
+- Spec: [specs/003-mobile-layout-polish/spec.md](specs/003-mobile-layout-polish/spec.md)
+- Tarefas: [specs/003-mobile-layout-polish/tasks.md](specs/003-mobile-layout-polish/tasks.md) _(gerado por `/speckit-tasks`)_
 
 ## Variáveis de ambiente
 
