@@ -3,18 +3,17 @@
 @theme {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
+
+  /* Brand palette */
+  --color-rose-burnt: #c4717a;
+  --color-nude: #e8d5c4;
+  --color-gold: #c9a84c;
+  --color-wine: #7b2d42;
+  --color-black-soft: #120a0e;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -24,8 +23,8 @@ body {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-black-soft);
+  color: var(--color-nude);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,4 +39,18 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card-strong {
+  background: rgba(18, 10, 14, 0.7);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }

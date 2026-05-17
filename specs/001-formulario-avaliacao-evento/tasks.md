@@ -20,9 +20,9 @@
 
 **Purpose**: Remover código legado incompatível com o novo design e preparar variáveis de ambiente.
 
-- [ ] T001 Remover diretórios de componentes legados: `src/components/cta/`, `src/components/features/`, `src/components/testimonials/`
-- [ ] T002 [P] Remover feature action legada: `src/features/cta/`
-- [ ] T003 [P] Criar `.env.example` na raiz com as três variáveis necessárias: `RESEND_API_KEY`, `RESEND_TO_EMAIL`, `RESEND_FROM_EMAIL` (com comentários explicativos)
+- [x] T001 Remover diretórios de componentes legados: `src/components/cta/`, `src/components/features/`, `src/components/testimonials/`
+- [x] T002 [P] Remover feature action legada: `src/features/cta/`
+- [x] T003 [P] Criar `.env.example` na raiz com as três variáveis necessárias: `RESEND_API_KEY`, `RESEND_TO_EMAIL`, `RESEND_FROM_EMAIL` (com comentários explicativos)
 
 **Checkpoint**: Código legado removido — repositório pronto para receber a nova implementação.
 
@@ -34,9 +34,9 @@
 
 **⚠️ CRÍTICO**: Nenhuma user story pode ser iniciada até esta fase estar concluída.
 
-- [ ] T004 Reescrever `src/lib/content.ts` completamente: novas interfaces TypeScript (`HeroContent`, `AboutContent`, `ExperiencesContent`, `EvaluationContent`, `FooterContent`, `SiteContent`) e objeto `content` com todos os dados — 15 cards de experiências (título, speaker?, emoji), 6 opções de rating (value 0–5, label, emoji), copy do hero celebratório, descrição do evento, labels do formulário e rodapé conforme `data-model.md`
-- [ ] T005 [P] Atualizar `src/app/globals.css`: adicionar variáveis CSS da paleta (`--color-rose-burnt: #C4717A`, `--color-nude: #E8D5C4`, `--color-gold: #C9A84C`, `--color-wine: #7B2D42`, `--color-black-soft: #120A0E`, `--color-glass-bg`, `--color-glass-border`), classe `.glass-card` com `backdrop-filter: blur(12px)`, e `scroll-behavior: smooth` no `html`
-- [ ] T006 [P] Atualizar `src/app/layout.tsx`: importar `Playfair_Display` e `Inter` via `next/font/google`, aplicar como variáveis CSS, atualizar `metadata` com título e descrição do evento "Mulheres Primeiro Lugar"
+- [x] T004 Reescrever `src/lib/content.ts` completamente: novas interfaces TypeScript (`HeroContent`, `AboutContent`, `ExperiencesContent`, `EvaluationContent`, `FooterContent`, `SiteContent`) e objeto `content` com todos os dados — 15 cards de experiências (título, speaker?, emoji), 6 opções de rating (value 0–5, label, emoji), copy do hero celebratório, descrição do evento, labels do formulário e rodapé conforme `data-model.md`
+- [x] T005 [P] Atualizar `src/app/globals.css`: adicionar variáveis CSS da paleta (`--color-rose-burnt: #C4717A`, `--color-nude: #E8D5C4`, `--color-gold: #C9A84C`, `--color-wine: #7B2D42`, `--color-black-soft: #120A0E`, `--color-glass-bg`, `--color-glass-border`), classe `.glass-card` com `backdrop-filter: blur(12px)`, e `scroll-behavior: smooth` no `html`
+- [x] T006 [P] Atualizar `src/app/layout.tsx`: importar `Playfair_Display` e `Inter` via `next/font/google`, aplicar como variáveis CSS, atualizar `metadata` com título e descrição do evento "Mulheres Primeiro Lugar"
 
 **Checkpoint**: Base de dados, estilos e tipografia prontos — implementação das user stories pode começar.
 
@@ -50,12 +50,12 @@
 
 ### Implementação
 
-- [ ] T007 [US1] Reescrever `src/components/hero/hero-content.tsx` como server component: headline emocional celebrando a experiência, subtítulo acolhedor, botão CTA com `href="#evaluation"` e scroll suave, background escuro com gradiente vinho/preto; importar copy de `@/lib/content`
-- [ ] T008 [P] [US1] Atualizar `src/components/hero/index.ts` barrel export para exportar `HeroContent`
-- [ ] T009 [P] [US1] Reescrever `src/components/about/about-content.tsx` como server component: título de seção, parágrafo descritivo do evento ("criado por mulheres e para mulheres..."), estilização com paleta premium; importar copy de `@/lib/content`
-- [ ] T010 [US1] Criar `src/components/experiences/experience-card.tsx` como client component (`"use client"`): Framer Motion `whileInView` com `initial={{ opacity: 0, y: 24 }}` e `viewport={{ once: true }}`, emoji grande, título, speaker (opcional em texto menor), classe `.glass-card`, efeito hover com scale e borda dourada
-- [ ] T011 [US1] Criar `src/components/experiences/experiences-content.tsx` como server component: título da seção, subtítulo, grid responsivo (`grid-cols-2 md:grid-cols-3 lg:grid-cols-5`) renderizando os 15 `ExperienceCard` a partir de `content.experiences.items`
-- [ ] T012 [P] [US1] Criar `src/components/experiences/index.ts` com barrel export de `ExperiencesContent` e `ExperienceCard`
+- [x] T007 [US1] Reescrever `src/components/hero/hero-content.tsx` como server component: headline emocional celebrando a experiência, subtítulo acolhedor, botão CTA com `href="#evaluation"` e scroll suave, background escuro com gradiente vinho/preto; importar copy de `@/lib/content`
+- [x] T008 [P] [US1] Atualizar `src/components/hero/index.ts` barrel export para exportar `HeroContent`
+- [x] T009 [P] [US1] Reescrever `src/components/about/about-content.tsx` como server component: título de seção, parágrafo descritivo do evento ("criado por mulheres e para mulheres..."), estilização com paleta premium; importar copy de `@/lib/content`
+- [x] T010 [US1] Criar `src/components/experiences/experience-card.tsx` como client component (`"use client"`): Framer Motion `whileInView` com `initial={{ opacity: 0, y: 24 }}` e `viewport={{ once: true }}`, emoji grande, título, speaker (opcional em texto menor), classe `.glass-card`, efeito hover com scale e borda dourada
+- [x] T011 [US1] Criar `src/components/experiences/experiences-content.tsx` como server component: título da seção, subtítulo, grid responsivo (`grid-cols-2 md:grid-cols-3 lg:grid-cols-5`) renderizando os 15 `ExperienceCard` a partir de `content.experiences.items`
+- [x] T012 [P] [US1] Criar `src/components/experiences/index.ts` com barrel export de `ExperiencesContent` e `ExperienceCard`
 
 **Checkpoint**: Hero, sobre e experiências renderizando corretamente. Página navegável da hero até onde o formulário será inserido.
 
@@ -69,9 +69,9 @@
 
 ### Implementação
 
-- [ ] T013 [US2] Criar `src/components/evaluation/evaluation-form.tsx` como client component (`"use client"`): `useState` para `selectedRating` (null | 0–5); renderizar 6 botões circulares grandes com emoji + label vindos de `content.evaluation.ratingOptions`; botão ativo com borda dourada + escala aumentada (Framer Motion `animate`); botão "Enviar Avaliação" desabilitado quando `selectedRating === null`; incluir campo `_trap` honeypot oculto via CSS (`position: absolute; opacity: 0; pointer-events: none`)
-- [ ] T014 [US2] Criar `src/components/evaluation/evaluation-content.tsx` como server component: título da seção com `id="evaluation"` para ancoragem do CTA, pergunta principal, renderizar `<EvaluationForm />` client component
-- [ ] T015 [P] [US2] Criar `src/components/evaluation/index.ts` barrel export de `EvaluationContent` e `EvaluationForm`
+- [x] T013 [US2] Criar `src/components/evaluation/evaluation-form.tsx` como client component (`"use client"`): `useState` para `selectedRating` (null | 0–5); renderizar 6 botões circulares grandes com emoji + label vindos de `content.evaluation.ratingOptions`; botão ativo com borda dourada + escala aumentada (Framer Motion `animate`); botão "Enviar Avaliação" desabilitado quando `selectedRating === null`; incluir campo `_trap` honeypot oculto via CSS (`position: absolute; opacity: 0; pointer-events: none`)
+- [x] T014 [US2] Criar `src/components/evaluation/evaluation-content.tsx` como server component: título da seção com `id="evaluation"` para ancoragem do CTA, pergunta principal, renderizar `<EvaluationForm />` client component
+- [x] T015 [P] [US2] Criar `src/components/evaluation/index.ts` barrel export de `EvaluationContent` e `EvaluationForm`
 
 **Checkpoint**: Formulário com seletor de nota funcional. Botão de envio desabilitado sem nota. Feedback visual ao selecionar.
 
@@ -85,10 +85,10 @@
 
 ### Implementação
 
-- [ ] T016 [US3] Criar `src/features/evaluation/submit-evaluation.ts` com diretiva `"use server"`: extrair e verificar campo `_trap` (retornar `{ success: true }` silenciosamente se preenchido); validar `rating` (0 ≤ n ≤ 5, obrigatório); sanitizar `comment` (trim, max 1000 chars); derivar label e emoji da opção correspondente em `content.evaluation.ratingOptions`; compor HTML do e-mail com nota em destaque, comentário (se presente) e timestamp em `America/Sao_Paulo`; chamar `resend.emails.send()`; retornar `ActionResult` conforme contrato em `contracts/server-actions.md`
-- [ ] T017 [P] [US3] Criar `src/features/evaluation/index.ts` barrel export de `submitEvaluation`
-- [ ] T018 [US3] Atualizar `src/components/evaluation/evaluation-form.tsx`: adicionar `useState` para `status` (`"idle" | "submitting" | "success" | "error"`); conectar `submitEvaluation` ao submit handler com `startTransition`; exibir loading no botão durante `"submitting"` (desabilitar + spinner ou texto); em `"success"`, substituir formulário por mensagem de agradecimento com Framer Motion `AnimatePresence`; em `"error"`, exibir mensagem amigável com opção de nova tentativa
-- [ ] T019 [US3] Atualizar `src/app/page.tsx`: importar e compor todas as seções na ordem canônica — `HeroContent`, `AboutContent`, `ExperiencesContent`, `EvaluationContent`, `FooterContent` — removendo imports legados de `cta`, `features` e `testimonials`
+- [x] T016 [US3] Criar `src/features/evaluation/submit-evaluation.ts` com diretiva `"use server"`: extrair e verificar campo `_trap` (retornar `{ success: true }` silenciosamente se preenchido); validar `rating` (0 ≤ n ≤ 5, obrigatório); sanitizar `comment` (trim, max 1000 chars); derivar label e emoji da opção correspondente em `content.evaluation.ratingOptions`; compor HTML do e-mail com nota em destaque, comentário (se presente) e timestamp em `America/Sao_Paulo`; chamar `resend.emails.send()`; retornar `ActionResult` conforme contrato em `contracts/server-actions.md`
+- [x] T017 [P] [US3] Criar `src/features/evaluation/index.ts` barrel export de `submitEvaluation`
+- [x] T018 [US3] Atualizar `src/components/evaluation/evaluation-form.tsx`: adicionar `useState` para `status` (`"idle" | "submitting" | "success" | "error"`); conectar `submitEvaluation` ao submit handler com `startTransition`; exibir loading no botão durante `"submitting"` (desabilitar + spinner ou texto); em `"success"`, substituir formulário por mensagem de agradecimento com Framer Motion `AnimatePresence`; em `"error"`, exibir mensagem amigável com opção de nova tentativa
+- [x] T019 [US3] Atualizar `src/app/page.tsx`: importar e compor todas as seções na ordem canônica — `HeroContent`, `AboutContent`, `ExperiencesContent`, `EvaluationContent`, `FooterContent` — removendo imports legados de `cta`, `features` e `testimonials`
 
 **Checkpoint**: Fluxo completo funcional — selecionar nota → enviar → confirmação. E-mail recebido. Mensagem de erro amigável em caso de falha.
 
@@ -102,7 +102,7 @@
 
 ### Implementação
 
-- [ ] T020 [US4] Atualizar `src/components/evaluation/evaluation-form.tsx`: adicionar `useState` para `comment`; inserir `<textarea>` abaixo do seletor de rating com `placeholder` de `content.evaluation.commentPlaceholder`, `maxLength={1000}`, contador de caracteres visível (`{comment.length}/1000`), estilização elegante com `.glass-card` e efeito de foco com borda dourada; incluir `comment` no `FormData` enviado para `submitEvaluation`
+- [x] T020 [US4] Atualizar `src/components/evaluation/evaluation-form.tsx`: adicionar `useState` para `comment`; inserir `<textarea>` abaixo do seletor de rating com `placeholder` de `content.evaluation.commentPlaceholder`, `maxLength={1000}`, contador de caracteres visível (`{comment.length}/1000`), estilização elegante com `.glass-card` e efeito de foco com borda dourada; incluir `comment` no `FormData` enviado para `submitEvaluation`
 
 **Checkpoint**: Comentário opcional funcional. Contador de caracteres visível. Envio com e sem comentário testado.
 
@@ -116,8 +116,8 @@
 
 ### Implementação
 
-- [ ] T021 [US5] Reescrever `src/components/footer/footer-content.tsx` como server component: nome/branding do evento, links de redes sociais de `content.footer.socialLinks` (cada link com `target="_blank" rel="noopener noreferrer"`), e-mail de contato, mensagem acolhedora de encerramento, copyright; estilização com gradiente vinho/preto e detalhes dourados
-- [ ] T022 [P] [US5] Atualizar `src/components/footer/index.ts` barrel export
+- [x] T021 [US5] Reescrever `src/components/footer/footer-content.tsx` como server component: nome/branding do evento, links de redes sociais de `content.footer.socialLinks` (cada link com `target="_blank" rel="noopener noreferrer"`), e-mail de contato, mensagem acolhedora de encerramento, copyright; estilização com gradiente vinho/preto e detalhes dourados
+- [x] T022 [P] [US5] Atualizar `src/components/footer/index.ts` barrel export
 
 **Checkpoint**: Rodapé com todos os elementos do spec. Links de redes sociais funcionais abrindo em nova aba.
 
@@ -127,12 +127,12 @@
 
 **Purpose**: Animações premium, WCAG 2.1 AA, responsividade e validação final.
 
-- [ ] T023 [P] Adicionar Framer Motion `whileInView` ao `src/components/hero/hero-content.tsx`: `initial={{ opacity: 0, y: -16 }}` na headline e `initial={{ opacity: 0 }}` no subtítulo, com `transition` escalonado
-- [ ] T024 [P] Adicionar Framer Motion `whileInView` ao `src/components/about/about-content.tsx`: fade-in suave da seção ao entrar no viewport
-- [ ] T025 [P] Verificar acessibilidade WCAG 2.1 AA em `src/components/evaluation/evaluation-form.tsx`: adicionar `aria-label` a cada botão de rating (`aria-label="Nota 5: Excelente"`), `aria-required="true"` no grupo de rating, garantir navegação por teclado funcional
-- [ ] T026 [P] Verificar contraste de cores e `alt` em todos os componentes: imagens com `alt` descritivo, textos com contraste mínimo 4.5:1 contra backgrounds
-- [ ] T027 Executar validação completa: `npm run ts-check && npm run lint` a partir da raiz — corrigir todos os erros de tipo e lint antes de commitar
-- [ ] T028 [P] Verificar responsividade em `http://localhost:3000` nos breakpoints 320px, 375px e 768px via DevTools — confirmar que não há scroll horizontal, elementos cortados ou textos ilegíveis
+- [x] T023 [P] Adicionar Framer Motion `whileInView` ao `src/components/hero/hero-content.tsx`: `initial={{ opacity: 0, y: -16 }}` na headline e `initial={{ opacity: 0 }}` no subtítulo, com `transition` escalonado
+- [x] T024 [P] Adicionar Framer Motion `whileInView` ao `src/components/about/about-content.tsx`: fade-in suave da seção ao entrar no viewport
+- [x] T025 [P] Verificar acessibilidade WCAG 2.1 AA em `src/components/evaluation/evaluation-form.tsx`: adicionar `aria-label` a cada botão de rating (`aria-label="Nota 5: Excelente"`), `aria-required="true"` no grupo de rating, garantir navegação por teclado funcional
+- [x] T026 [P] Verificar contraste de cores e `alt` em todos os componentes: imagens com `alt` descritivo, textos com contraste mínimo 4.5:1 contra backgrounds
+- [x] T027 Executar validação completa: `npm run ts-check && npm run lint` a partir da raiz — corrigir todos os erros de tipo e lint antes de commitar
+- [x] T028 [P] Verificar responsividade em `http://localhost:3000` nos breakpoints 320px, 375px e 768px via DevTools — confirmar que não há scroll horizontal, elementos cortados ou textos ilegíveis
 
 **Checkpoint Final**: Todos os critérios de sucesso do spec atendidos. TypeScript e lint passando. Landing page pronta para deploy.
 

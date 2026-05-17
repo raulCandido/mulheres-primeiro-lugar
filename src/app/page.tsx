@@ -1,8 +1,7 @@
 import { HeroContent } from "@/components/hero";
 import { AboutContent } from "@/components/about";
-import { FeaturesContent } from "@/components/features";
-import { TestimonialsContent } from "@/components/testimonials";
-import { CtaContent } from "@/components/cta";
+import { ExperiencesContent } from "@/components/experiences";
+import { EvaluationContent } from "@/components/evaluation";
 import { FooterContent } from "@/components/footer";
 
 export default function HomePage() {
@@ -10,9 +9,8 @@ export default function HomePage() {
     <main>
       <HeroContent />
       <AboutContent />
-      <FeaturesContent />
-      <TestimonialsContent />
-      <CtaContent />
+      <ExperiencesContent />
+      <EvaluationContent />
       <FooterContent />
     </main>
   );

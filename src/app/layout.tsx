@@ -8,11 +8,12 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-  title: "Mulheres Primeiro Lugar",
-  description: "Plataforma de apoio e empoderamento feminino.",
+  title: "Mulheres Primeiro Lugar — Avalie sua experiência",
+  description:
+    "Um encontro criado por mulheres e para mulheres. Compartilhe sua opinião sobre o evento e nos ajude a tornar o próximo ainda mais especial.",
   openGraph: {
     title: "Mulheres Primeiro Lugar",
-    description: "Plataforma de apoio e empoderamento feminino.",
+    description: "Você fez parte de algo extraordinário. Conta pra gente o que achou!",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };
